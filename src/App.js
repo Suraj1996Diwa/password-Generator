@@ -64,7 +64,7 @@ function App() {
     if (result) {
       // navigator.clipboard.writeText(result);
       toast.success("Copied to your clipboard");
-      localStorage.setItem("password1", result);
+      
     } else {
       toast.error("No password to copy");
     }
