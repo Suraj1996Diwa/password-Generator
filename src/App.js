@@ -52,6 +52,8 @@ function App() {
     if (generatedPassword) {
       setResult(generatedPassword);
       setPasswordList([generatedPassword, ...passordList]);
+      localStorage.setItem("passwords", passordList);
+      localStorage.setItem("password1", result);
       console.log(passordList);
     } else {
       toast.error(" Please select at least one option");
@@ -62,7 +64,7 @@ function App() {
     if (result) {
       // navigator.clipboard.writeText(result);
       toast.success("Copied to your clipboard");
-      localStorage.setItem("password", result);
+      localStorage.setItem("password1", result);
     } else {
       toast.error("No password to copy");
     }
